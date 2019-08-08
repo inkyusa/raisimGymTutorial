@@ -36,7 +36,7 @@ elif environment == 'cartpole':
         __ENVIRONMENT_PATH__ = os.path.dirname(os.path.realpath(__file__)) + "/raisim_gym/env/env/cartpole"
 ```
 #### 1.3 create Environment.hpp and copy visSetupCallback.hpp
-create a file named Environment.hpp in `raisim_gym/env/env/cartpole` and copy [visSetupCallback.hpp](../../blob/master/raisim_gym/env/env/laikago/visSetupCallback.hpp) file from another example (e.g., laikago) to the same folder (`raisim_gym/env/env/cartpole`). `Environment.hpp` file is now empty but we will fill it in [3. Raisim Environment.hpp](#3-raisim-environmenthpp)
+create a file named Environment.hpp in `raisim_gym/env/env/cartpole` and copy [visSetupCallback.hpp](https://github.com/leggedrobotics/raisimGym/blob/master/raisim_gym/env/env/laikago/visSetupCallback.hpp) file from another example (e.g., laikago) to the same folder (`raisim_gym/env/env/cartpole`). `Environment.hpp` file is now empty but we will fill it in [3. Raisim Environment.hpp](#3-raisim-environmenthpp)
 
 ### 2. creating cart pole URDF model and configuration file
 go to `raisim_gym/env/env/cartpole` and create another folder named `cartpole` (confusion alert! we now have two cartpole folders). And create `cartpole.urdf` and `default_cfg.yaml` files under the folder we just created. So far your folder structure should look like
@@ -361,7 +361,7 @@ The complete example files can be found from [here](https://github.com/inkyusa/r
 
 ### 4. create python script and compile the environment
 We need a python script to train/test the environment we just created. To do this, go to the `raisimGym/scripts` and create `cartpole_tutorial.py` file.
-The contents will be similar as of [laikago example](../../blob/master/scripts/laikago_blind_locomotion.py) but we will add `test mode` that will allow to immediately test a pretrained model.
+The contents will be similar as of [laikago example](https://github.com/leggedrobotics/raisimGym/blob/master/scripts/laikago_blind_locomotion.py) but we will add `test mode` that will allow to immediately test a pretrained model.
 
 #cartpole_tutorial.py
 ```python
