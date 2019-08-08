@@ -129,7 +129,7 @@ and append 3 joints as fixed, prismatic, and revolute type
 We move `sliderBar` 5m above the floor for better visualization and define the prismatic joint between `sliderBar` and `slider` in order to only allow x-axis movement (the blue axis in the `world` link). Finally, the revolute joint defines the rod and the slider relationship; rotating along y-axis (the red axis) with the origin of the rod (i.e., x=0, y=0, z=0). For simplity and easy of training, collisions are not considered in this example. Up-right position of the rod defines zero degree.
 
 #### 2.2 Configuration file
-open `default_cfg.yaml` file and fill in with the following code. These are some control flags and hyperparameters for PPO2 training. We will re-visit this in [training section](#4-training-using-raisim).
+open `default_cfg.yaml` file and fill in with the following code. These are some control flags and hyperparameters for PPO2 training. We will re-visit this in [training section](#5-training-using-raisim).
 
 ```XML
 seed: 1
