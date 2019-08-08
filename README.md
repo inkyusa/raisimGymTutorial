@@ -231,7 +231,7 @@ Next, we set a visualization routine, action scale, and load Reward coefficients
   }
 ```
 
-`reset` function is called whenever an episode terminates due to reaching either a terminal condition or the maximum episode length. For simplicity, the reset state ('gc_init_` and `gv_init_`) are all zeros in this example.
+`reset` function is called whenever an episode terminates due to reaching either a terminal condition or the maximum episode length. For simplicity, the reset state (`gc_init_` and `gv_init_`) are all zeros in this example.
 
 ```c++
   ~ENVIRONMENT() final = default;
