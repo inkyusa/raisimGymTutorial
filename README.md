@@ -15,6 +15,7 @@ This tutorial introduces the following and if you are already familiar with any,
 - [4. create python script and compile the environment](#4-create-python-script-and-compile-the-environment)
 - [5. training using Raisim](#5-training-using-raisim)
 - [6. testing the trained model](#6-testing-the-trained-model)
+- [7. Troubleshooting](#7-troubleshooting)
 
 
 ### 1. adding a new Raisim environment
@@ -430,7 +431,9 @@ else:
             running_reward = 0.0
             ep_len = 0
 ```
-As mentioned earlier, there are hyperparameters of algorithm we are using (i.e., PPO2) and (such params; `cfg['environment']['nminibatches']`, and `cfg['environment']['total_timesteps']`, etc.). These values are defined in [configuration file](#22-configuration-file) and you can alter them while training. If you want to learn more about how PPO works, please have a look these nice materials; [Policy Gradient methods and Proximal Policy Optimization (PPO): diving into Deep RL!](https://youtu.be/5P7I-xPq8u8) and [Deep Reinforcement Learning: Pong from Pixels](http://karpathy.github.io/2016/05/31/rl/)
+As mentioned earlier, there are hyperparameters of algorithm we are using (i.e., PPO2) and (such params; `cfg['environment']['nminibatches']`, and `cfg['environment']['total_timesteps']`, etc.). These values are defined in [configuration file](#22-configuration-file) and you can alter them while training. 
+
+If you want to learn more about how PPO works, please have a look these nice materials; [Policy Gradient methods and Proximal Policy Optimization (PPO): diving into Deep RL!](https://youtu.be/5P7I-xPq8u8) and [Deep Reinforcement Learning: Pong from Pixels](http://karpathy.github.io/2016/05/31/rl/)
 
 Let's compile the example and move to the next section. Go to the `raisimGym`'s root folder (NOT THE ROOT OF THIS REPO) and execute the following command line (we assume you cloned this repo at `/home/your/workspace/`).
 ```
@@ -462,15 +465,9 @@ The figure below exemplifies one of the training sessions which took 5 mins for 
 ### 6. testing the trained model
 Once you finished training, we can deploy it by simply switching the mode. The command below will load a pretrained weight and perform a test for 100,000 timesteps.
 ```shell
-python3 scripts/cartpole --mode test --weight ./weights/cartpole_tutorial/cartpole.pkl cartpole_tutorial.py
+python ./cartpole_tutorial.py --mode test --weight ./weights/cartpole_tutorial/cartpole.pkl
 ```
 You should be able to see the trained model in action.
 
-
-
-
-
-
-
-
-
+### 7. Troubleshooting
+* WIP
