@@ -449,17 +449,17 @@ By default, we visualize the trained model every 50 policy updates and will be a
 
 0 policy update | 50 policy update  
 :-----------------------------------:|:------------------------------------:
-<img src="imgs/cartpole/0.gif"> | <img src="imgs/cartpole/50.gif">
+<img src="imgs/0.gif"> | <img src="imgs/50.gif">
 
 100 policy update   | 200 policy update  
 :-----------------------------------:|:------------------------------------:
-<img src="imgs/cartpole/100.gif"> | <img src="imgs/cartpole/200.gif">
+<img src="imgs/100.gif"> | <img src="imgs/200.gif">
 
 By default, we also enabled tensorboard logger. Once you run the above command, your default browser will be opened and you can monitor the training progress (maybe select `SCALAR` from the top-right drop-down menu to see episode_reward and episode_length). Tensorboard events, videos recorded every 50 checkpoints, and trained model will be saved `cartpole/data/Cartpole_tutorial`.
 
 The figure below exemplifies one of the training sessions which took 5 mins for 1M timesteps (200 policy update).
 <p align="center">
-<img src="imgs/cartpole/tb.png">
+<img src="imgs/tb.png">
 </p>
 
 ### 6. testing the trained model
