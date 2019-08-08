@@ -28,7 +28,7 @@ create resource folder named `cartpole/rsc` and create `cartpole.urdf` and `defa
 #### 2.1 1D Cart pole
 We will create 4 links; `world`, `sliderBar`, `slider`, and `rod` with 3 joints; `world_to_sliderBar`, `sliderBar_to_slider`, and `slider_to_rod`. The figure below illustrates details and you can easily find the corresponding entities.
 <p align="center">
- <img src="imgs/cartpole/urdf_explain.jpg" height="450">
+ <img src="imgs/urdf_explain.jpg" height="450">
 </p>
 Let's add 4 links in the cartpole.urdf file as follow;
 
