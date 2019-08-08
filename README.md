@@ -1,4 +1,8 @@
-In this page, we present a very simple toy example; 1D cart pole problem for better understanding and easy-of-use RaisimGym. To do this tutorial, we assume that you already set up raisimGym as presented in [README](../../blob/master/README.md) and are able to run one of the examples. It is also worth mentioning that [RaiSim Manual](https://slides.com/jeminhwangbo/raisim-manual) introduces fundamental ideas of Raisim, very useful theoretical background and examples so that it is strongly recommended to have a look alongside with this page.
+# 1D Cart pole Raisim tutorial
+
+In this page, we present a simple toy example; 1D cart pole problem for better understanding and easy-of-use RaisimGym. To do this tutorial, we assume that you already set up raisimGym as presented in [README](../../blob/master/README.md) and are able to run one of the examples. 
+
+It is also worth mentioning that [RaiSim Manual](https://slides.com/jeminhwangbo/raisim-manual) introduces fundamental ideas of Raisim, useful theoretical background and examples so that it is strongly recommended to have a look alongside with this page.
 
 This tutorial introduces the following and if you are already familiar with any, feel free to skip.
 
@@ -36,14 +40,15 @@ create a file named Environment.hpp in `raisim_gym/env/env/cartpole` and copy [v
 
 ### 2. creating cart pole URDF model and configuration file
 go to `raisim_gym/env/env/cartpole` and create another folder named `cartpole` (confusion alert! we now have two cartpole folders). And create `cartpole.urdf` and `default_cfg.yaml` files under the folder we just created. So far your folder structure should look like
+
 <p align="center">
-[[imgs/cartpole/folder_structure.png | height=250px]]
+<img src="imgs/cartpole/folder_structure.png" height="250">
 </p>
 
 #### 2.1 1D Cart pole
 We will create 4 links; `world`, `sliderBar`, `slider`, and `rod` with 3 joints; `world_to_sliderBar`, `sliderBar_to_slider`, and `slider_to_rod`. The figure below illustrates details and you can easily find the corresponding entities.
 <p align="center">
-[[imgs/cartpole/urdf_explain.jpg]]
+ <img src="imgs/cartpole/urdf_explain.jpg" height="450">
 </p>
 Let's add 4 links in the cartpole.urdf file as follow;
 
@@ -463,17 +468,18 @@ By default, we visualize the trained model every 50 policy updates and will be a
 
 0 policy update | 50 policy update  
 :-----------------------------------:|:------------------------------------:
-[[imgs/cartpole/0.gif]] | [[imgs/cartpole/50.gif]]
+<img src="imgs/cartpole/0.gif"> | <img src="imgs/cartpole/50.gif">
 
 100 policy update   | 200 policy update  
 :-----------------------------------:|:------------------------------------:
-[[imgs/cartpole/100.gif]] | [[imgs/cartpole/200.gif]]
+<img src="imgs/cartpole/100.gif"> | <img src="imgs/cartpole/200.gif">
 
 By default, we also enabled tensorboard logger. Once you run the above command, your default browser will be opened and you can monitor the training progress (maybe select `SCALAR` from the top right-most drop-down menu to see episode_reward and episode_length).
 
 The figure below exemplifies one of the training sessions which took 5 mins for 1M timesteps (200 policy update).
-
-[[imgs/cartpole/tb.png]]
+<p align="center">
+<img src="imgs/cartpole/tb.png">
+</p>
 
 ### 6. testing the trained model
 Once you finished training, we can deploy it by simply switching the mode. The command below will load a pretrained weight and perform a test for 100,000 timesteps.
