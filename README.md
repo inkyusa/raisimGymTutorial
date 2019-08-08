@@ -1,6 +1,6 @@
 # 1D Cart pole RaisimGym tutorial
 
-In this page, we present a simple toy example; 1D cart pole problem for better understanding and easy-of-use [RaisimGym](https://github.com/leggedrobotics/raisimGym). To do this tutorial, we assume that you already set up raisimGym as presented in [README](../../blob/master/README.md) and are able to run one of the examples. 
+In this page, we present a simple toy example; 1D cart pole problem for better understanding and easy-of-use [RaisimGym](https://github.com/leggedrobotics/raisimGym). To do this tutorial, we assume that you already set up raisimGym as presented in [README](https://github.com/leggedrobotics/raisimGym) and are able to run one of the examples. 
 
 It is also worth mentioning that [RaiSim Manual](https://slides.com/jeminhwangbo/raisim-manual) introduces fundamental ideas of Raisim, useful theoretical background and examples so that it is strongly recommended to have a look alongside with this page.
 
