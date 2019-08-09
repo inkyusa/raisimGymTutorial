@@ -11,3 +11,7 @@ raisimGymTutorial is under MIT license.
 ## Please click the following links to read the tutorials
 
 - [Cartpole](https://github.com/jhwangbo/raisimGymTutorial/tree/master/cartpole)
+<p align="left">
+ <img src="cartpole/imgs/200.gif" height="250">
+</p>
+
