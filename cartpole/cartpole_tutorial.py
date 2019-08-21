@@ -75,11 +75,12 @@ else:
     running_reward = 0.0
     ep_len = 0
     for _ in range(100000):
+        env.wrapper.showWindow()
         action, _ = model.predict(obs)
         obs, reward, done, infos = env.step(action, visualize=True)
         running_reward += reward[0]
         ep_len += 1
-        if done:
+        if done[0]:
             print("Episode Reward: {:.2f}".format(running_reward))
             print("Episode Length", ep_len)
             running_reward = 0.0
