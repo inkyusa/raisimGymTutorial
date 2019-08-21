@@ -1,6 +1,5 @@
 from ruamel.yaml import YAML, dump, RoundTripDumper
 from raisim_gym.env.RaisimGymVecEnv import RaisimGymVecEnv as Environment
-from raisim_gym.env.env.cartpole import __CARTPOLE_RESOURCE_DIRECTORY__ as __RSCDIR__
 from raisim_gym.algo.ppo2 import PPO2
 from raisim_gym.archi.policies import MlpPolicy
 from raisim_gym.helper.raisim_gym_helper import ConfigurationSaver, TensorboardLauncher
@@ -10,8 +9,9 @@ import math
 import argparse
 
 # configuration
+current_dir = os.path.dirname(os.path.realpath(__file__))
 parser = argparse.ArgumentParser()
-parser.add_argument('--cfg', type=str, default=os.path.abspath(__RSCDIR__ + "/default_cfg.yaml"),
+parser.add_argument('--cfg', type=str, default=os.path.abspath(current_dir+"/rsc/default_cfg.yaml"),
                     help='configuration file')
 parser.add_argument('-m', '--mode', help='set mode either train or test', type=str, default='train')
 parser.add_argument('-w', '--weight', help='trained weight path', type=str, default='')
@@ -29,7 +29,7 @@ saver = ConfigurationSaver(log_dir=log_dir + '/Cartpole_tutorial',
 # create environment from the configuration file
 if args.mode == "test": # for test mode, force # of env to 1
     cfg['environment']['num_envs'] = 1
-env = Environment(RaisimGymEnv(__RSCDIR__, dump(cfg['environment'], Dumper=RoundTripDumper)))
+env = Environment(RaisimGymEnv(current_dir+"/rsc", dump(cfg['environment'], Dumper=RoundTripDumper)))
 
 
 if mode == 'train':
